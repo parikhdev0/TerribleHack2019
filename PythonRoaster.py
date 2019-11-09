@@ -4,4 +4,13 @@
 
 roasts = {
         'photography' : [],
+        'beer' : [],
+        'wine' : [],
+        'travelling' : [],
+        'smoking' : [],
+        'reading' : [],
+        'adventure' : [],
+        'fitness' : [],
+        'camping' : [],
+        'Netflix' : [],
         'beach' : []}
