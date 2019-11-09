@@ -3,25 +3,39 @@
 
 import pull
 import pyperclip
+import random
+# from time import sleep
 
-def Roast(person, age):
-    if age < 20:
-
+def Roast(person, age = None):
+    #TODO
+    roast = []
+    if age == None:
+        for categ in roasts.keys():
+            if categ.lower() in person["bio"].lower():
+                roast.append(random.choice(roasts[categ]))
+    elif age < 20:
+        pass
     elif age < 30:
-
+        pass
     elif age < 40:
-
+        pass
     elif age < 50:
-
+        pass
     else:
+        pass
+
+    return '; '.join(roast)
 
 n = 10
 roastees = pull.users(n)
 
 for person in roastees:
-    pyperclip.copy(Roast(person, person['age']))
+    try:
+        pyperclip.copy(Roast(person, person['age']))
+    except:
+        pyperclip.copy(Roast(person))
     #pull.send()
-    #time.sleep as worst case
+    # sleep(10)
 
 
 roasts = {
@@ -50,5 +64,3 @@ roasts = {
         'tattoos': [],
         'drinking': [],
         'party': []}
-
-
