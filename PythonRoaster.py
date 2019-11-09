@@ -9,31 +9,16 @@ import random
 def Roast(person, age = None):
     #TODO
     roast = []
-    if age == None:
-        for categ in roasts.keys():
-            if categ.lower() in person["bio"].lower():
-                roast.append(random.choice(roasts[categ]))
-    elif age < 20:
-        pass
-    elif age < 30:
-        pass
-    elif age < 40:
-        pass
-    elif age < 50:
-        pass
-    else:
-        pass
-
+    for categ in roasts.keys():
+        if categ.lower() in person["bio"].lower():
+            roast.append(random.choice(roasts[categ]))
     return '; '.join(roast)
 
 n = 10
 roastees = pull.users(n)
 
 for person in roastees:
-    try:
-        pyperclip.copy(Roast(person, person['age']))
-    except:
-        pyperclip.copy(Roast(person))
+    pyperclip.copy(Roast(person))
     #pull.send()
     # sleep(10)
 
