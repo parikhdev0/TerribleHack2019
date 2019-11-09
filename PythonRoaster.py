@@ -1,6 +1,11 @@
 # Let the Roasting Begin
+import pull
 
+n = 10
+roastees = pull.users(10)
 
+for person in roastees:
+    pass
 
 roasts = {
         'photography' : [],
@@ -9,6 +14,9 @@ roasts = {
         'travelling' : [],
         'smoking' : [],
         'reading' : [],
+        'cat' : [],
+        'mates' : [],
+        'friends' : [],
         'adventure' : [],
         'fitness' : [],
         'camping' : [],
